@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  data: {},
+  data: [],
   error: false,
   loading: false,
 };
@@ -28,7 +28,6 @@ const dashboardSlice = createSlice({
   },
 });
 
-//export const dashboardData = (state) => state.dashboard.data;
 export const {
   requestDashboard,
   dashboardSuccessResponse,

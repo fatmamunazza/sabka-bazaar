@@ -20,7 +20,7 @@ const Product = ({
   useEffect(() => {
     dispatch(requestProduct({ category: selectedCategory }));
   }, [dispatch, selectedCategory]);
-  const allCategories = categories.map((category) => category.title);
+  const allCategories = categories?.map((category) => category.title);
 
   // Function to handle changes in the dropdown value
   const handleCategoryChange = (event) => {
@@ -42,7 +42,7 @@ const Product = ({
               onChange={handleCategoryChange}
               label="Category"
             >
-              {allCategories.map((cat) => (
+              {allCategories?.map((cat) => (
                 <MenuItem
                   key={cat}
                   value={cat.toLowerCase().replaceAll(" ", "-")}

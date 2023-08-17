@@ -27,7 +27,7 @@ const Home = ({ onCategoryClick, setSelectedCategory }) => {
 
         <Grid item xs={12} md={8}>
           <SaleCarousel />
-          {categories.map((category, index) => (
+          {categories?.map((category, index) => (
             <CategoryCard
               key={category.title}
               {...category}
